@@ -15,26 +15,30 @@ css_data = {}
 with open(css_file, 'r') as file:
     lines = file.readlines()
 
-# Remove lines that start with comments
+# Remove lines that start with comments or empty lines
 lines = [line.strip() for line in lines if line.strip() and not line.strip().startswith('//')]
 
-# Extract color definitions and line breaks
+# Extract color definitions and group them by lines
 color_regex = r'@define-color (\w+)\s+(#[0-9a-fA-F]{6});'
-box_lines = [[]]
+current_line = []
+lines_with_colors = []
 for line in lines:
     match = re.match(color_regex, line)
     if match:
-        class_name, color = match.groups()
-        box_lines[-1].append((class_name, color))
+        current_line.append(match.groups())
+    elif not current_line:
+        continue  # Skip lines until we find the first color definition
     else:
-        # Empty line encountered, start a new line of boxes
-        box_lines.append([])
+        lines_with_colors.append(current_line)
+        current_line = []
+# Append the last line if it contains colors
+if current_line:
+    lines_with_colors.append(current_line)
 
 # Calculate the size of the final image
-num_lines = len(box_lines)
-max_boxes_per_line = max(len(line) for line in box_lines)
-total_width = max_boxes_per_line * box_size[0] + (max_boxes_per_line - 1) * box_spacing
-total_height = num_lines * box_size[1] + (num_lines - 1) * line_spacing
+num_lines = len(lines_with_colors)
+total_width = max(len(line) for line in lines_with_colors) * (box_size[0] + box_spacing)
+total_height = num_lines * (box_size[1] + line_spacing)
 
 # Create a new image
 image = Image.new('RGB', (total_width, total_height), color='white')
@@ -43,9 +47,9 @@ draw = ImageDraw.Draw(image)
 # Load the font
 font = ImageFont.truetype(font_file, font_size)
 
-# Iterate over the box lines and draw the boxes
+# Iterate over the lines and draw the boxes
 y = 0
-for line in box_lines:
+for line in lines_with_colors:
     x = 0
     for class_name, color in line:
         # Draw the box
@@ -54,9 +58,9 @@ for line in box_lines:
 
         # Draw the text
         text = f'{class_name}\n{color}'
-        text_width, text_height = draw.textsize(text, font=font)
-        text_coords = (x + (box_size[0] - text_width) // 2, y + (box_size[1] - text_height) // 2)
-        draw.text(text_coords, text, fill='white', font=font)
+        text_bbox = draw.textbbox((0, 0), text, font=font)
+        text_coords = ((box_size[0] - text_bbox[2]) // 2, (box_size[1] - text_bbox[3]) // 2)
+        draw.text((x + text_coords[0], y + text_coords[1]), text, fill='white', font=font)
 
         x += box_size[0] + box_spacing
     y += box_size[1] + line_spacing
