@@ -1,0 +1,32 @@
+@define-color bg0_h #1d2021;
+@define-color bg0   #282828;
+@define-color bg0_s #32302f;
+@define-color bg1  #3c3836;
+@define-color bg2  #504945;
+@define-color bg3  #665c54;
+@define-color bg4  #7c6f64;
+
+@define-color fg0  #fbf1a8;
+@define-color fg1 #ebdbb2;
+@define-color fg2 #d5c4a1;
+@define-color fg3 #bdae86;
+@define-color fg4 #a89977;
+
+@define-color red    #e23950;
+@define-color green  #4ca37d;
+@define-color yellow #e4c445;
+@define-color blue   #75b7ce;
+@define-color purple #b1b1ee;
+@define-color gray   #a89984;
+@define-color orange #e3a167;
+@define-color brown  #bc9543;
+
+@define-color red-sec    #c51d34;
+@define-color green-sec  #316650;
+@define-color yellow-sec #c5a112f;
+@define-color blue-sec   #2a6478;
+@define-color purple-sec #9292e7;
+@define-color gray-sec   #928374;
+@define-color orange-sec #db863a;
+@define-color brown-sec  #734222;
+
