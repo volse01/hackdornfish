@@ -2,9 +2,9 @@ from PIL import Image, ImageDraw, ImageFont
 import re
 
 # Configuration
-css_file = '/home/volse/Nextcloud/Documents/hackdornfish/hackdornfish_dark.css'
-output_file = '/home/volse/Nextcloud/Documents/hackdornfish/hackdornfish_dark.png'  # Output PNG file
-box_size = (25, 25)  # Box size in mm
+css_file = '/home/volse/Nextcloud/Documents/hackdornfish/hackdornfish_light.css'
+output_file = '/home/volse/Nextcloud/Documents/hackdornfish/hackdornfish_light.png'  # Output PNG file
+box_size = (75, 75)  # Box size in mm
 box_spacing = 5  # Spacing between boxes in mm
 line_spacing = 5  # Spacing between lines in mm
 font_size = 12  # Font size for the text
@@ -14,9 +14,6 @@ font_file = '/home/volse/Nextcloud/Alles_nur_geCloud/Miscellaneous/Fonts/Inter/s
 css_data = {}
 with open(css_file, 'r') as file:
     lines = file.readlines()
-
-# Remove lines that start with comments or empty lines
-lines = [line.strip() for line in lines if line.strip() and not line.strip().startswith('//')]
 
 # Extract color definitions and group them by lines
 color_regex = r'@define-color (\w+)\s+(#[0-9a-fA-F]{6});'
@@ -35,6 +32,16 @@ for line in lines:
 if current_line:
     lines_with_colors.append(current_line)
 
+# Determine font color based on CSS file name
+css_file_name = css_file.split('/')[-1].lower()
+if 'dark' in css_file_name:
+    font_color_main = 'white'
+    font_color_sec = 'black'
+
+else:
+    font_color_main = 'black'
+    font_color_sec = 'white'
+
 # Calculate the size of the final image
 num_lines = len(lines_with_colors)
 total_width = max(len(line) for line in lines_with_colors) * (box_size[0] + box_spacing)
@@ -52,18 +59,26 @@ y = 0
 for line in lines_with_colors:
     x = 0
     for class_name, color in line:
+
+        # Determine font color based on class name
+        if 'bg' in class_name or 'sec' in class_name:
+                font_color = font_color_main
+        else:
+                font_color = font_color_sec
+
         # Draw the box
         box_coords = (x, y, x + box_size[0], y + box_size[1])
         draw.rectangle(box_coords, fill=color, outline='black')
 
-        # Draw the text
+        # Write the text
         text = f'{class_name}\n{color}'
         text_bbox = draw.textbbox((0, 0), text, font=font)
         text_coords = ((box_size[0] - text_bbox[2]) // 2, (box_size[1] - text_bbox[3]) // 2)
-        draw.text((x + text_coords[0], y + text_coords[1]), text, fill='white', font=font)
+        draw.text((x + text_coords[0], y + text_coords[1]), text, fill=font_color, font=font)
 
         x += box_size[0] + box_spacing
     y += box_size[1] + line_spacing
 
 # Save the image
 image.save(output_file)
+

@@ -1,6 +1,4 @@
-@define-color bg0_h #1d2021;
 @define-color bg0   #282828;
-@define-color bg0_s #32302f;
 @define-color bg1  #3c3836;
 @define-color bg2  #504945;
 @define-color bg3  #665c54;
@@ -21,12 +19,12 @@
 @define-color orange #e3a167;
 @define-color brown  #bc9543;
 
-@define-color red-sec    #c51d34;
-@define-color green-sec  #316650;
-@define-color yellow-sec #c5a112f;
-@define-color blue-sec   #2a6478;
-@define-color purple-sec #9292e7;
-@define-color gray-sec   #928374;
-@define-color orange-sec #db863a;
-@define-color brown-sec  #734222;
+@define-color red_sec       #c51d34;
+@define-color green_sec     #316650;
+@define-color yellow_sec    #c5a112;
+@define-color blue_sec      #2a6478;
+@define-color purple_sec    #9292e7;
+@define-color gray_sec      #928374;
+@define-color orange_sec    #db863a;
+@define-color brown_sec     #734222;
 
