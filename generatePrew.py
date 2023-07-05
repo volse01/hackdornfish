@@ -2,13 +2,13 @@ from PIL import Image, ImageDraw, ImageFont
 import re
 
 # Configuration
-css_file = '/home/volse/Nextcloud/Documents/hackdornfish/hackdornfish_light.css'
-output_file = '/home/volse/Nextcloud/Documents/hackdornfish/hackdornfish_light.png'  # Output PNG file
+css_file = input("Location of your Input CSS file: ")
+output_file = input("Where do you want your output? ")  # Output PNG file
 box_size = (75, 75)  # Box size in mm
 box_spacing = 5  # Spacing between boxes in mm
 line_spacing = 5  # Spacing between lines in mm
 font_size = 12  # Font size for the text
-font_file = '/home/volse/Nextcloud/Alles_nur_geCloud/Miscellaneous/Fonts/Inter/static/Inter-Regular.ttf'
+font_file = input("Location of the Font to use: ")
 
 # Read CSS file
 css_data = {}
