@@ -25,15 +25,15 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.5"
-     inkscape:cx="203"
-     inkscape:cy="541"
+     inkscape:zoom="0.76152813"
+     inkscape:cx="285.60994"
+     inkscape:cy="508.84529"
      inkscape:window-width="1566"
      inkscape:window-height="834"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g20256" />
+     inkscape:current-layer="g20254-2-9" />
   <defs
      id="defs2">
     <clipPath
@@ -92,33 +92,77 @@
          id="g20254-9"
          style="display:inline">
         <rect
-           style="fill:#bdae86;fill-opacity:1;stroke-width:0.264999"
+           style="fill:#dcca99;fill-opacity:1;stroke-width:0.264999"
            id="rect1877-3-3"
            width="180.81145"
            height="148.92645"
            x="16.05477"
            y="68.686157" />
         <rect
-           style="fill:#2a6378;fill-opacity:1;stroke-width:0.264999"
+           style="fill:#4a4b92;fill-opacity:1;stroke-width:0.264999"
            id="rect1879-6-6"
            width="84.891182"
            height="58.593212"
            x="30.376234"
            y="91.19252" />
         <rect
-           style="fill:#665c54;fill-opacity:1;stroke-width:0.264999"
+           style="fill:#5b4f46;fill-opacity:1;stroke-width:0.264999"
            id="rect1933-7-0"
            width="89.110413"
            height="55.281193"
            x="65.132233"
            y="118.50404" />
         <rect
-           style="fill:#75b7ce;fill-opacity:1;stroke-width:0.264999"
+           style="fill:#67a0d2;fill-opacity:1;stroke-width:0.264999"
            id="rect1935-5-6"
            width="81.233612"
            height="59.829723"
            x="42.285103"
            y="138.28319" />
+      </g>
+      <g
+         inkscape:label="braun"
+         id="g20254-2"
+         style="display:inline"
+         transform="matrix(1.0199947,0,0,1.0160076,-4.3608827,-5.2862374)">
+        <rect
+           style="fill:#6a3d20;fill-opacity:1;stroke-width:0.271842"
+           id="rect1877-3-6"
+           width="184.92699"
+           height="153.22839"
+           x="20.010204"
+           y="68.711029"
+           transform="matrix(1,0,-0.02690219,0.99963807,0,0)" />
+        <rect
+           style="fill:#b75b24;fill-opacity:1;stroke-width:0.264999"
+           id="rect1879-6-1"
+           width="84.891182"
+           height="58.593212"
+           x="30.376234"
+           y="91.19252" />
+      </g>
+      <g
+         inkscape:label="violet"
+         id="g20254-2-9"
+         style="display:inline"
+         transform="matrix(1.01364,0,0,1.0325267,-0.85054052,-3.846834)">
+        <rect
+           style="fill:#b1b1ee;fill-opacity:1;stroke-width:0.275164"
+           id="rect1877-3-6-2"
+           width="189.01462"
+           height="153.60139"
+           x="15.948696"
+           y="68.341209"
+           transform="matrix(1,0,-0.02743006,0.99962373,0,0)"
+           inkscape:label="rect1877-3-6-2" />
+        <rect
+           style="fill:#a452bf;fill-opacity:1;stroke-width:0.264999"
+           id="rect1879-6-1-0"
+           width="84.891182"
+           height="58.593212"
+           x="30.376234"
+           y="91.19252"
+           inkscape:label="rect1879-6-1-0" />
       </g>
     </g>
   </g>
