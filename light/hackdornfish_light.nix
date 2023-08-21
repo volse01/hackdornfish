@@ -1,0 +1,31 @@
+{
+  bg0 = "#fbf1a8";
+  bg1 = "#ebdbb2";
+  bg2 = "#d5c4a1";
+  bg3 = "#bdae86";
+  bg4 = "#a89977";
+
+  fg0 = "#282828";
+  fg1 = "#3c3836";
+  fg2 = "#504945";
+  fg3 = "#665c54";
+  fg4 = "#7c6f64";
+
+  red = "#850d28";
+  green = "#316650";
+  yellow = "#c5a112";
+  blue = "#4a4b92";
+  purple = "#a452bf";
+  gray = "#928374";
+  orange = "#6a3d20";
+  brown = "#734222";
+
+  red_sec = "#ee445b";
+  green_sec = "#4ca37d"; 
+  yellow_sec = "#e4c445";
+  blue_sec = "#67a0d2";
+  purple_sec = "#b1b1ee";
+  gray_sec = "#a89984";
+  orange_sec = "#e3a167";
+  brown_sec = "#b75b24";
+}
