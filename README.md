@@ -27,7 +27,7 @@ The Python script works with a CSS script as input, where colors need to be defi
 
 ```css
 @define-color black #ffffff;
-
+```
  
 Each free line in the CSS code acts as a Backspace for the boxes in the output .png file.
 
