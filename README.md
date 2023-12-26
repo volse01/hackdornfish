@@ -8,7 +8,7 @@ a simple color code for my desktop environment inspired by gruvbox.
 [3. dark mode](#sec3)\
 [4. the python script](#sec4)\
 [5. the signature](#sec5)\
-[6. roadmap](#sec5)
+[6. roadmap](#sec6)
 
 
 ## 1. concept <a name="sec1"></a>   
@@ -37,7 +37,7 @@ each free line in the CSS code acts as a Backspace for the boxes in the output .
 
 the signature directory contains an html script with a css style sheet to create an appealing email signature. it uses the defined colors and is created along the neumorphistic design language 
 
-## 5. roadmap <a name="sec5"></a>
+## 6. roadmap <a name="sec6"></a>
 
 - [ ] gather more opinions on colors.
 - [ ] get the hackdornfish in there
